@@ -6,6 +6,7 @@ from awsglue.dynamicframe import DynamicFrame
 from pyspark import SparkContext
 from pyspark.sql.functions import to_date, col, input_file_name
 
+
 args = getResolvedOptions(
     sys.argv,
     ["JOB_NAME", "SOURCE_PATH", "TARGET_PATH"]
