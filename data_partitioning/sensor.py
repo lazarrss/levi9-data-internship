@@ -49,7 +49,7 @@ df = df.withColumn(
 null_date_count = df.filter(col("date").isNull()).count()
 print(f"ROWS WITH NULL date: {null_date_count}")
 
-dyf = DynamicFrame.fromDF(df, glueContext, "weather_dyf")
+dyf = DynamicFrame.fromDF(df, glueContext, "sensor_dyf")
 
 glueContext.write_dynamic_frame.from_options(
     frame=dyf,

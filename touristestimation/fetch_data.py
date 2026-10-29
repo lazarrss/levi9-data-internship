@@ -7,11 +7,7 @@ import boto3
 from botocore.exceptions import ClientError
 import requests
 
-# $env:AWS_PROFILE = "new"
-# $env:ENDPOINT = "https://rq5fbome43vbdgq7xoe7d6wbwa0ngkgr.lambda-url.eu-west-1.on.aws/"
-# $env:SECRETS_NAME = "tourist_estimate_token"
-# $env:REGION_NAME = "eu-west-1"
-# added this in powershell and executed it from there
+# Required environment variables: ENDPOINT, SECRETS_NAME, REGION_NAME (optional: AWS_PROFILE)
 
 ENDPOINT = os.environ.get("ENDPOINT")
 SECRET_NAME = os.environ.get("SECRETS_NAME")
